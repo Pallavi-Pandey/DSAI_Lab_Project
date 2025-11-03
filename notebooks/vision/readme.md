@@ -1,0 +1,2 @@
+- the sample data for the model can be seen from 
+    - https://www.kaggle.com/code/learnbug404/printed-part-recognition
