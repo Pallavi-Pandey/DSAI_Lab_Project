@@ -17,3 +17,9 @@ Milestone 4: Model Architecture [October 31]
 - Part 1
 - Part 2
 - Part 3  https://docs.google.com/document/d/1cBM4N6kZj-NeLVg-1GqQKxlXfz0wBAkD7524KoNWy7U/edit?tab=t.0#heading=h.p1d6hyq4x2hd
+
+
+---
+Directory Structure
+ - notebooks contains the code
+ - each part - speech, vision, llm is in subdirectories
