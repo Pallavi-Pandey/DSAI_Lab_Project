@@ -1,7 +1,7 @@
 
 ## **Milestone 3 : MultiModalHealthcareModel - Architecture**
 
-<img width="671" height="451" alt="image" src="https://github.com/user-attachments/assets/dc031ca7-73e0-4bcf-bec0-90178c1e3f33" />
+<img width="671" height="451" alt="MultiModalHealthcareModel" src="https://github.com/user-attachments/assets/3376e452-5534-41d7-80be-f097a43cb511" />
 
 
 (assume that the picture has been included)
@@ -104,4 +104,5 @@ This model is a  **multimodal AI-assisted system for healthcare**  that:
     
 
 -   **The doctor is central to decision-making**; AI provides tools for efficiency and presentation.
+
 
