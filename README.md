@@ -41,16 +41,16 @@ This project implements a comprehensive multimodal AI pipeline that combines:
 │   ├── speech/                  # Speech experiments
 │   │   └── data-prep.ipynb
 │   ├── text/                    # Text/LLM experiments
-│   │   ├── autosoap-ai-powered-clinical-documentation.ipynb
-│   │   ├── data-prep.ipynb
+│   │   ├── autosoap-ai-powered-clinical-documentation.ipynb   # Pre-available code to generate SOAP notes
+│   │   ├── data-prep.ipynb   # notebook for week 2 data prep
 │   │   ├── dsail-llm-part_ver1.ipynb
-│   │   ├── dsail-llm-part_ver2.ipynb
+│   │   ├── dsail-llm-part_ver2.ipynb  #  Architecture submission for week 4 
 │   │   └── DSAIL_M2_part1.ipynb
 │   └── vision/                  # Vision experiments
 │       ├── data-prep.ipynb
 │       └── OCR.ipynb
 │
-└── *.pdf                         # Milestone documentation
+└── *.pdf, *.md                         # Milestone documentation
 ```
 
 ## Project Milestones
