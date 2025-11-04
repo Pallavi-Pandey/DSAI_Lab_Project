@@ -31,6 +31,11 @@ After experimentation this version creates summaries for all available SOAP note
 ## Model Architecture
 An initial image is below. This would be refined further
 
+
+
+<img width="877" height="571" alt="textmodel_architecture" src="https://github.com/user-attachments/assets/35b71e6f-f0db-4a86-9fd0-0e0d3e113d1b" />
+
+
 ### Modules
 
 - Teacher Model: Mistral-7B, pretrained transformer, receives constructed prompt with SOAP content and generates quality labels for patient-friendly summary. This approach has been taken to create quality labels for the data.
@@ -79,6 +84,7 @@ Prevented abrupt divergence in training loss. Reduced overfitting and improved g
 - 
 - Examples:
 -- Technical output: "Assessment: Pain in the tooth is also caused due to periapical reasons like periapical cysts, abscess, granuloma, periodontal or gingival infection. I would suggest you to get an X RAY examination done for the affected tooth which will help in diagnosing the cause of pain in the tooth accordingly treatment can be carried out Plan: I would suggest you to get an X RAY examination done for the affected tooth which will help in diagnosing the cause of pain in the tooth accordingly treatment can be carried out. Approach a dentist and get the evaluation done, decayed teeth are treated with root canal treatment to relive pain permanently”
+  
 -- Patient summary: “Dear Patient, I'm sorry to hear about your tooth pain. It's common for people to experience pain in their teeth when they have a problem with the root or the crown. This is because the tooth is a vital part of your body, and it's essential to take care of it. To help you, I'd recommend seeing a dentist. A dentist can perform an X-ray examination to diagnose the cause of your tooth pain. This will help them determine the best treatment for you. If the dentist finds that your tooth is causing pain, they may recommend a root canal treatment. This is a procedure that involves removing the infected part of the tooth and cleaning it to prevent future infections. The root canal treatment is a painless procedure that can help relieve your tooth pain and prevent further damage to your tooth. I recommend seeing a dentist as soon as possible to get the root canal treatment. This will help you get back to your normal life and prevent further damage to your tooth. I hope this helps. Please let me know if you have any other questions."
 
 ### Observed Behavior: 
@@ -118,4 +124,5 @@ Some underfitting at lowest LR; slight overfitting with high LR and zero dropout
 ### Next Steps:
 - Further tuning to optimize context size and batch handling
 - Implement more robust postprocessing to mitigate blank/NaN outputs
+
 - Plan thorough error analysis, and other evaluation methods for Milestone 5
