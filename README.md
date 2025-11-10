@@ -75,6 +75,12 @@ This project implements a comprehensive multimodal AI pipeline that combines:
 **Status:** Completed  
 [Documentation](https://docs.google.com/document/d/1cBM4N6kZj-NeLVg-1GqQKxlXfz0wBAkD7524KoNWy7U/edit?tab=t.0#heading=h.p1d6hyq4x2hd)
 
+### Milestone 4: Model Evaluation
+**Due:** November 7
+**Status:** Completed  
+[Documentation]
+https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%205_Evaluation_Group1_textpart.md
+
 ## Installation
 
 ```bash
