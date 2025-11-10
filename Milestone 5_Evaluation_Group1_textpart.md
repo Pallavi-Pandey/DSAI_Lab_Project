@@ -41,7 +41,8 @@ A good practice in LLM is to compare the metrics with the train and test sets. T
 
 - Initial numbers reported in milestone 4
 
-Metric		| Train  	| 	Test |
+|Metric		| Train  	| 	Test |
+| :---- | :---- | :---- |
 | Total | 471.000000 |472.000000|
 | Valid |279.000000 |265.000000 |
 |NaN_rate| 0.407643 | 0.438559|
@@ -49,12 +50,13 @@ Metric		| Train  	| 	Test |
 | BERTScore_F1 | 0.876159 | 0.875688 |
 | Medical_Retain  | 0.434783 | 0.645161 |
 | Hallucination_rate | 0.007168 | 0.007547 |
-|  |  |
+|  |  |    |
 
 
 - Numbers after batch and inference tuning
 
-Metric		| Train  	| 	Test |
+|Metric		| Train  	| 	Test |
+| :---- | :---- | :---- |
 | Total | 471.000000 |472.000000|
 | Valid |467.000000 |467.000000 |
 |NaN_rate| 0.008493  |  0.0105939|
@@ -62,7 +64,7 @@ Metric		| Train  	| 	Test |
 | BERTScore_F1 | 0.878474  |  0.877470 |
 | Medical_Retain  | 0.487179  |    0.613636 |
 | Hallucination_rate | 0.010707 |   0.010707 |
-|  |  |
+|  |  |  |
 
 
 ## Quantitative Results
@@ -91,5 +93,6 @@ To be further explored
 ## Model Artifacts
 - Model Inference Code available as separate notebook (uses finetuned model loaded to Kaggle)
 - Predictions for train and test sets
+
 
 
