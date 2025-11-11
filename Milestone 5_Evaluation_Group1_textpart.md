@@ -31,6 +31,12 @@ The typical quantitative metrics for a Summarization module are ROUGE-L and BERT
 - Some more qualitative metrics like Medical_Retain and Hallucination_Rate were also tried
 
 
+## Training loss 
+This was not shared in Milestone 4. With the chosen hyperparams, the loss stabilized around 0.5 after 3 epochs. More epochs did not reduce the loss significantly.
+
+<img width="611" height="285" alt="image" src="https://github.com/user-attachments/assets/f2f10d5b-1b6c-4018-acc3-7fb86fb1df92" />
+
+
 
 ## Quantitative Results
 A good practice in LLM is to compare the metrics with the train and test sets. The metrics are very similar for these two, suggesting the that fine tuning has not overfitted the model. 
@@ -67,7 +73,7 @@ A good practice in LLM is to compare the metrics with the train and test sets. T
 |  |  |  |
 
 
-## Quantitative Results
+## Qualitative Results
 
 - For this model, this was done manually
 - For many samples, references and predictions are similar
@@ -93,6 +99,7 @@ To be further explored
 ## Model Artifacts
 - Model Inference Code available as separate notebook (uses finetuned model loaded to Kaggle)
 - Predictions for train and test sets
+
 
 
 
