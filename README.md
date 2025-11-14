@@ -6,7 +6,7 @@ A multimodal AI system integrating **speech**, **vision**, and **text** processi
 
 This project implements a comprehensive multimodal AI pipeline that combines:
 - **Speech Recognition**: Audio transcription using state-of-the-art models
-- **Computer Vision**: OCR and visual analysis for medical documents
+- **Computer Vision**: OCR and visual analysis for medical documents  (aspirational - dropped)
 - **Natural Language Processing**: LLM-based clinical documentation and analysis
 - **Multimodal Fusion**: Integration layer combining insights from all modalities
 
