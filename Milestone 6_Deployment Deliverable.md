@@ -1,20 +1,4 @@
-Great — now that the **correct flow is confirmed**, I will produce exactly what you asked for earlier:
-
-✅ **Deployment Requirements Section**
-Only what is required:
-
-* Clear instructions to run (README or /deployment/README.md)
-* Inputs/Outputs described with examples
-* Mentioning both **Colab/Kaggle Demo Notebook** and **Local Demo + API**
-* No extra text, no extra explanations
-
-Here it is:
-
----
-
-# **🚀 Milestone 6 — Deployment Deliverable (Required Section Only)**
-
-### **Deployment Method:**
+### **Deployment Deliverable:**
 
 * **Google Colab or Kaggle Demo Notebook** (fallback for GPU-heavy Whisper + Llama pipeline)
 * **Local Demo + REST API** (Flask/FastAPI)
