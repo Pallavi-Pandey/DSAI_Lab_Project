@@ -63,20 +63,7 @@ Here's what it means in simple terms...
 
 # **3. Example Inputs & Outputs**
 
-### **Example 1 — Audio Input (Patient Mode)**
-
-**User Audio:**
-“I am having a severe headache.”
-
-**System Output:**
-
-```
-I'm so sorry to hear that you're experiencing a severe headache! Don't worry, I'm here to help you understand what's going on and offer some support.....
-```
-
----
-
-### **Example 2 — Text Input (Doctor Mode)**
+### **Example — Text Input (Doctor Mode)**
 
 **Input Text:**
 “Patient reports vomiting and headache for 2 hours.”
@@ -88,22 +75,6 @@ S: Vomiting + headache for 2 hours.
 O: No objective findings given.
 A: Consider migraine, gastritis, dehydration.
 P: Recommend fluids, anti-emetic, consider neuro exam.
-```
-
----
-
-### **Example 3 — Audio + Text Input (Combined Mode)**
-
-**Audio:** “I feel dizzy since yesterday.”
-**Text:** “Also mild nausea.”
-
-**Output (Doctor Mode):**
-
-```
-S: Dizziness since yesterday + mild nausea.
-O: No vitals provided.
-A: Possible vestibular issues.
-P: Check BP, hydration, positional tests.
 ```
 
 ---
