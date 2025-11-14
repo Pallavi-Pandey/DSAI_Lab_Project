@@ -55,8 +55,10 @@ P: Recommend NSAIDs and rest...
 ### **Patient Mode Output**
 
 ```
-It looks like your symptoms may be from muscle strain.
-Here's what it means in simple terms...
+There are many possible reasons for severe headaches, and I'll try to break them down simply:
+
+1. **Tension headaches**: These are the most common type of headache, often caused by muscle tension in the neck and scalp.
+2. **Migraines**: These can be debilitating ....
 ```
 
 ---
