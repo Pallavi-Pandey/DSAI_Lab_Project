@@ -35,7 +35,7 @@ And automatically generate:
 
 ```
                ┌──────────────────────────┐
-               │   Audio Upload (Doctor)   │
+               │       Audio Upload       │
                └───────────┬──────────────┘
                            │
                ┌───────────▼───────────────┐
@@ -46,7 +46,7 @@ And automatically generate:
         Reports Upload     │
    (PDFs, Images, Text)    │
            ┌───────────────▼───────────────┐
-           │     Multimodal Embedding      │
+           │       Report Processing       │
            │ (OCR + LLM Processing Layer)  │
            └───────────────┬───────────────┘
                            │ Combined Context
@@ -244,14 +244,6 @@ POST /process
 
   * Whisper: Local GPU 
   * LLMs: Ollama API
-
-**API Usage**
-
-```
-curl -X POST https://yourapp/process \
-  -F "audio=@recording.wav" \
-  -F "reports=@bloodtest.pdf"
-```
 
 ---
 
