@@ -81,6 +81,16 @@ This project implements a comprehensive multimodal AI pipeline that combines:
 [Documentation]
 https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%205_Evaluation_Group1_textpart.md
 
+### Milestone 6:  Deployment & Documentation
+**Due:** November 14
+**Status:** Partially Completed 
+
+[LLM endpoint]
+https://huggingface.co/spaces/srsrini/DSAIL_endpoint
+
+[Documentation]
+
+
 ## Installation
 
 ```bash
