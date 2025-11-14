@@ -22,35 +22,31 @@ This project implements a comprehensive multimodal AI pipeline that combines:
 
 ```
 .
-├── app/                          # Application layer
-│   ├── api.py                   # REST API endpoints
-│   ├── main.py                  # Application entry point
-│   └── utils.py                 # Utility functions
+├── README.md
+├── Final_Project_Report.md
+├── docs/                               # Milestone docs & PDFs
+│   ├── Milestone-1.pdf
+│   ├── Milestone 2 _ DS & AI-Lab-Project.pdf
+│   ├── Milestone 3 _ DS & AI-Lab-Project.pdf
+│   ├── Milestone 3_Architecture_Group1.md
+│   ├── Milestone 4_Model_Group1.md
+│   ├── Milestone 5_Evaluation_Group1.md
+│   ├── Milestone 6_Deployment Deliverable.md
+│   └── Comprehensive Technical Documentation.md
 │
-├── modules/                      # Core modules
-│   ├── fusion/                  # Multimodal fusion
-│   │   └── projector.py        # Cross-modal projection
-│   ├── speech/                  # Speech processing
-│   │   └── transcribe.py       # Audio transcription
-│   ├── text/                    # Text processing
-│   │   └── llm_infer.py        # LLM inference
-│   └── vision/                  # Vision processing
-│       └── model.py            # Visual models
-│
-├── notebooks/                    # Jupyter notebooks
-│   ├── speech/                  # Speech experiments
-│   │   └── data-prep.ipynb
-│   ├── text/                    # Text/LLM experiments
-│   │   ├── autosoap-ai-powered-clinical-documentation.ipynb   # Pre-available code to generate SOAP notes
-│   │   ├── data-prep.ipynb   # notebook for week 2 data prep
-│   │   ├── dsail-llm-part_ver1.ipynb
-│   │   ├── dsail-llm-part_ver2.ipynb  #  Architecture submission for week 4 
-│   │   └── DSAIL_M2_part1.ipynb
-│   └── vision/                  # Vision experiments
-│       ├── data-prep.ipynb
-│       └── OCR.ipynb
-│
-└── *.pdf, *.md                         # Milestone documentation
+└── notebooks/                          # Jupyter notebooks
+    ├── speech/
+    │   ├── data-prep.ipynb
+    │   ├── finetune_code.ipynb
+    │   └── llama3_2.ipynb
+    ├── text/
+    │   ├── autosoap-ai-powered-clinical-documentation.ipynb
+    │   ├── dsail-llm-inference.ipynb
+    │   ├── dsail-llm-part_ver1.ipynb
+    │   └── dsail-llm-part_ver2.ipynb
+    └── vision/
+        ├── OCR.ipynb
+        └── readme.md
 ```
 
 ## Project Milestones
@@ -58,28 +54,32 @@ This project implements a comprehensive multimodal AI pipeline that combines:
 ### Milestone 1: Problem Definition & Literature Review
 **Due:** October 3  
 **Status:** Completed  
-[Documentation](https://docs.google.com/document/d/1VsX2NAXAXOAsl_p9jUESoeWp5kDbawq9T37Xr6b8ezw/edit?usp=sharing)
+[Documentation](https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%201_Problem_Definition_Literature_Review_Group1.md)
 
 ### Milestone 2: Dataset Preparation
 **Due:** October 10  
 **Status:** Completed  
-[Documentation](https://docs.google.com/document/d/1a-ehQkVcbYksfY3MIzB8zWLm-uEAKVIBHDbAvpE6YFw/edit?tab=t.0#heading=h.p1d6hyq4x2hd)
+[Documentation](https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%202_Dataset_Preparation_Group1.md)
 
 ### Milestone 3: Model Selection & Implementation
 **Due:** October 17  
 **Status:** Completed  
-[Documentation](https://docs.google.com/document/d/1VsX2NAXAXOAsl_p9jUESoeWp5kDbawq9T37Xr6b8ezw/edit?usp=sharing)
+[Documentation](https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%203_Architecture_Group1.md)
 
 ### Milestone 4: Model Architecture
 **Due:** October 31  
 **Status:** Completed  
-[Documentation](https://docs.google.com/document/d/1cBM4N6kZj-NeLVg-1GqQKxlXfz0wBAkD7524KoNWy7U/edit?tab=t.0#heading=h.p1d6hyq4x2hd)
+[Documentation](https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%204_Model_Group1.md)
 
 ### Milestone 5: Model Evaluation
 **Due:** November 7
 **Status:** Completed  
-[Documentation]
-https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%205_Evaluation_Group1_textpart.md
+[Documentation](https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%205_Evaluation_Group1.md)
+
+### Milestone 6: Deployment Deliverable
+**Due:** November 14
+**Status:** Completed  
+[Documentation](https://github.com/Pallavi-Pandey/DSAI_Lab_Project/blob/main/Milestone%206_Deployment_Deliverable.md)
 
 ## Installation
 
@@ -133,7 +133,9 @@ Detailed documentation for each milestone is available in the PDF files:
 - `Milestone-1.pdf` - Problem definition and literature review
 - `Milestone 2 _ DS & AI-Lab-Project.pdf` - Dataset preparation
 - `Milestone 3 _ DS & AI-Lab-Project.pdf` - Model selection
-- `Milestone 4 _ DS & AI-Lab-Project - LLM Part.pdf` - Architecture details
+- `Milestone 4_Model_Group1.md` - Architecture details
+- `Milestone 5_Evaluation_Group1.md` - Model Evaluation
+- `Milestone 6_Deployment_Deliverable.md` - Deployment Deliverable
 
 ## Contributing
 
