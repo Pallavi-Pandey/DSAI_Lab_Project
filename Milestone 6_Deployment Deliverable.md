@@ -1,7 +1,7 @@
 ### **Deployment Deliverable:**
 
 * **Google Colab or Kaggle Demo Notebook** (fallback for GPU-heavy Whisper + Llama pipeline)
-* **Local Demo + REST API** (Flask/FastAPI)
+* **Local Demo + REST API** (FastAPI)
 
 ---
 
@@ -71,10 +71,6 @@ Here's what it means in simple terms...
 **System Output:**
 
 ```
-Are you a doctor or a patient? patient
-Enter your message: I am having a severe headace
-
---- AI Response ---
 I'm so sorry to hear that you're experiencing a severe headache! Don't worry, I'm here to help you understand what's going on and offer some support.....
 ```
 
