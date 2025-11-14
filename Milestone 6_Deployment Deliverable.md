@@ -44,46 +44,6 @@ Here it is:
 
 ---
 
-## **Option B — Run Local Demo + API**
-
-### **Local App**
-
-1. Install dependencies:
-
-   ```
-   pip install -r requirements.txt
-   ```
-2. Start local app:
-
-   ```
-   python app/app.py
-   ```
-3. Open in browser:
-
-   ```
-   http://localhost:8000
-   ```
-
-### **REST API**
-
-1. Run API:
-
-   ```
-   uvicorn api.main:app --reload
-   ```
-2. Endpoints:
-
-   * `POST /predict/audio`
-   * `POST /predict/text`
-   * `POST /predict/mixed` (audio + text)
-   * Internally routes to:
-
-     * Whisper ASR
-     * Text Processing Pipeline
-     * Role-based Llama 3.2
-
----
-
 # **2. Inputs / Outputs (With Examples)**
 
 ## **Inputs Accepted**
@@ -122,14 +82,16 @@ Here's what it means in simple terms...
 ### **Example 1 — Audio Input (Patient Mode)**
 
 **User Audio:**
-“Doctor I’m feeling breathless since morning.”
+“I am having a severe headache.”
 
 **System Output:**
 
 ```
-You mentioned breathlessness since morning.
-This can have multiple causes like infection or anxiety...
-Here’s what you can do...
+Are you a doctor or a patient? patient
+Enter your message: I am having a severe headace
+
+--- AI Response ---
+I'm so sorry to hear that you're experiencing a severe headache! Don't worry, I'm here to help you understand what's going on and offer some support.....
 ```
 
 ---
