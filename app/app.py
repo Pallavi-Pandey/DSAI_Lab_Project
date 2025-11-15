@@ -67,8 +67,16 @@ def generate_patient_summary(assessment, plan):
 with gr.Blocks() as demo:
     gr.Markdown("# Patient Summary Generator")
     with gr.Row():
-        assessment = gr.Textbox(lines=2, label="Assessment")
-        plan = gr.Textbox(lines=2, label="Plan")
+        assessment = gr.Textbox(
+            lines=2, 
+            label="Assessment", 
+            placeholder="Enter medical assessment (e.g., Patient presents with acute bronchitis, mild dehydration, and elevated blood pressure...)"
+        )
+        plan = gr.Textbox(
+            lines=2, 
+            label="Plan", 
+            placeholder="Enter treatment plan (e.g., Prescribe antibiotics, increase fluid intake, monitor blood pressure daily...)"
+        )
     submit = gr.Button("Generate Summary")
     output = gr.Textbox(lines=10, label="Generated Patient-Friendly Summary")
     submit.click(fn=generate_patient_summary, inputs=[assessment, plan], outputs=output)
