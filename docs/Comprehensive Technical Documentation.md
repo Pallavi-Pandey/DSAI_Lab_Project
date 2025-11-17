@@ -215,8 +215,10 @@ transcript = whisper_model(audio)
 report_text = extract_text_from_reports(uploaded_reports)
 context = transcript + report_text
 
-patient_output = llm_patient.generate(context)
-doctor_output = llm_doctor.generate(context)
+doctor_output = llm_doctor.generate(context) # actually done by a human, simulated by AutoSOAP model
+
+patient_context = doctor_output['Assessmetnt'] + doctor_output['Plan']
+patient_output = llm_patient.generate(patient_context)
 
 return {
     "patient_summary": patient_output,
@@ -243,7 +245,7 @@ POST /process
 * **Model Hosting**:
 
   * Whisper: Local GPU 
-  * LLMs: Ollama API
+  * LLMs: TinyLlama Endpoint on HuggingFace Spaces
 
 ---
 
