@@ -1,6 +1,8 @@
-## B. **Technical Documentation**
+# **Comprehensive Documentation — AI Medical Summary & Insights Assistant**
 
-### **1. Environment Setup**
+#  **Technical Documentation**
+
+## **1. Environment Setup**
 
 **Languages & Versions**
 
@@ -32,7 +34,7 @@ torch / cuda (for local inference)
 
 ---
 
-### **2. Data Pipeline**
+## **2. Data Pipeline**
 
 #### **Inputs**
 
@@ -59,7 +61,7 @@ torch / cuda (for local inference)
 
 ---
 
-### **3. Model Architecture**
+## **3. Model Architecture**
 
 #### **Modules:**
 
@@ -100,7 +102,7 @@ context_window: 128k
 
 ---
 
-### **4. Training Summary**
+## **4. Training Summary**
 
 * Whisper: No retraining, used pretrained base
 * Embedding model: bge-base-en-v1.5
@@ -111,7 +113,7 @@ context_window: 128k
 
 ---
 
-### **5. Evaluation Summary**
+## **5. Evaluation Summary**
 
 * Patient Summary Quality: Rated “Clear & Understandable” by testers
 * Doctor Insight Accuracy: Flagged 7/10 clinically relevant observations
@@ -123,7 +125,7 @@ context_window: 128k
 
 ---
 
-### **6. Inference Pipeline**
+## **6. Inference Pipeline**
 
 **Pseudocode**
 
@@ -157,7 +159,8 @@ POST /process
 
 ---
 
-### **7. Deployment Details**
+## **7. Deployment Details**
+
 
 * **Backend**: FastAPI 
 * **Frontend**: Streamlit
@@ -168,7 +171,7 @@ POST /process
 
 ---
 
-### **8. System Design Considerations**
+## **8. System Design Considerations**
 
 * **Scalability**
 
@@ -190,7 +193,7 @@ POST /process
 
 ---
 
-### **9. Error Handling & Monitoring**
+## **9. Error Handling & Monitoring**
 
 * Audio too noisy → return “Please re-upload clearer audio”
 * Unsupported report file → return friendly message
@@ -203,7 +206,7 @@ POST /process
 
 ---
 
-### **10. Reproducibility Checklist**
+## **10. Reproducibility Checklist**
 
 * `requirements.txt`
 * `.env.example` with API keys
@@ -213,77 +216,3 @@ POST /process
 
 ---
 
-## C. **User Documentation**
-
-### **App Overview**
-
-A tool for medical teams to convert raw patient conversations + reports into:
-
-* A simple summary for patients
-* A clinically intelligent insight report for doctors
-
-### **How to Use the App**
-
-#### **Step 1 — Upload**
-
-* Upload the **audio recording**
-* Upload all **patient reports** (PDF, images, prescriptions)
-
-#### **Step 2 — Review Outputs**
-
-You’ll see two results:
-
-1. **Patient-Friendly Summary**
-
-   * Editable
-   * Meant to help patients understand their condition
-
-2. **Doctor Insight Report**
-
-   * Flags risks
-   * Suggests tests
-   * Highlights inconsistencies
-
-#### **Step 3 — Approve/Send**
-
-* Medical staff edits → Save → Send to patient
-
----
-# User Guide - LLM Summary Model
-
-## App Overview
-Generate patient-friendly summaries from clinical notes.
-
-## Input Description
-Enter Assessment and Plan text.
-
-## Output Description
-Read a simple, clear summary.
-
-## Step-by-Step Instructions
-1. Launch/Access the app at https://huggingface.co/spaces/srsrini/DSAIL_endpoint
-2. Enter the assessment and plan.
-3. Click "Generate Summary."
-4. The summary takes 25-40 seconds
-
-   
-## Troubleshooting
-- If the app doesn’t load, refresh your browser.
-- For errors, check input format (text only, no special characters).
-
-## Screenshots
-<img width="1356" height="724" alt="image" src="https://github.com/user-attachments/assets/46adfbc8-3f38-4426-b251-4e8c3fd1b63d" />
-
-
-
-
-### **Troubleshooting**
-
-| Issue                | Fix                                                      |
-| -------------------- | -------------------------------------------------------- |
-| Audio rejected       | Try uploading a WAV/MP3 ≤ 50MB                           |
-| OCR failed           | Ensure PDF has selectable text or upload a clearer image |
-| Summary doesn’t load | Reload → model auto-retries                              |
-| App is slow          | Large reports or long audios increase processing time    |
-
----
