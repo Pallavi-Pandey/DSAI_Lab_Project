@@ -1,6 +1,8 @@
 # **Comprehensive Documentation — AI Medical Summary & Insights Assistant**
 
-#  **Technical Documentation**
+The architecture uses different models. It is easier to describe the two models separately. 
+
+# A **Technical Documentation - Speech** 
 
 ## **1. Environment Setup**
 
@@ -39,7 +41,7 @@ torch / cuda (for local inference)
 #### **Inputs**
 
 * **Audio**: Recorded doctor-patient conversation
-* **Reports**: Lab PDFs, scan reports, prescriptions, handwritten notes (images)
+* **Reports**: Lab PDFs, scan reports, prescriptions, handwritten notes (images) - not implemented yet
 
 #### **Preprocessing**
 
@@ -76,18 +78,7 @@ torch / cuda (for local inference)
    * PDF extract
    * Medical term matcher (via ontology)
 
-3. **LLM #1 — Patient Summary Model**
 
-   * Style: Simple explanation, no medical jargon
-
-4. **LLM #2 — Doctor Assistance Model**
-
-   * Capabilities:
-
-     * Differential diagnosis generation
-     * Symptom correlation
-     * Detect missing tests
-     * Red-flag alert system
 
 #### **Hyperparameters**
 
@@ -149,6 +140,8 @@ return {
 
 **API Call Example**
 
+(not implemented, placeholder)
+
 ```
 POST /process
 {
@@ -167,8 +160,7 @@ POST /process
 * **Model Hosting**:
 
   * Whisper: Local GPU 
-  * LLMs: TinyLlama Endpoint on HuggingFace Spaces
-
+ 
 ---
 
 ## **8. System Design Considerations**
@@ -184,7 +176,7 @@ POST /process
 
 * **Data Flow**
 
-  * Audio + Report → Structured Context → Dual LLM Pipeline
+  * Audio + Report → Structured Context →  LLM Pipeline
 
 * **Security**
 
@@ -202,7 +194,7 @@ POST /process
 
   * STT durations
   * OCR accuracy issues
-  * LLM latency spikes
+  
 
 ---
 
@@ -215,4 +207,107 @@ POST /process
 * Seed values if any
 
 ---
+
+# B **Technical Documentation - Text Summarization** 
+
+## 1. Environment Setup
+- **Python Version:** 3.10
+- **Key Libraries:**
+  - torch
+  - transformers
+  - peft
+  - streamlit
+  - huggingface_hub
+- **Install Instructions:**
+  ```
+  pip install -r requirements.txt
+  ```
+- **Hardware:** Minimum GPU for inference, local CPU for testing.
+
+## 2. Data Pipeline
+- **Labels:** Generated from a 'Teacher' model
+- **Preprocessing:** text normalization, structured EHR cleaning.
+- **Feature Extraction:** Tokenization, context alignment.
+- **Datasets:** `patient_summary_finetune_data_400records.jsonl` 
+- **Data Location:** Attached to Kaggle project
+
+## 3. Model Architecture
+
+   * Capabilities:
+
+     * Differential diagnosis generation
+     * Symptom correlation
+     * Detect missing tests
+     * Red-flag alert system
+
+
+ **LLM #1 — Doctor Assistance Model**
+
+* Due to license issues, replaced with AutoSOAP model
+* Combines patient text and doctor text to create SOAP format output
+* Impementation reused with credits
+ 
+ **LLM #2 — Patient Summary Model**
+
+ (TODO - describer teacher summary)
+
+   * Style: Simple explanation, no medical jargon
+
+- **Base Model:** TinyLlama/TinyLlama-1.1B-Chat-v1.0
+- **Fine-Tuning:** PEFT LoRA adapter.
+- **Diagram:** [$ARCHITECTURE_IMAGE]
+- **Hyperparameters:** batch_size=4, max_new_tokens=256, top_p=0.95, temperature=0.7.
+
+
+## 4. Training Summary
+- **Time:** 4 hours (T4 GPU)
+- **Epochs:** 10
+- **Optimizer:** 8-bit AdamW
+- **Loss:** Cross-entropy
+- **Metrics:** ROUGE-L, BERTScore, Medical Term Retention
+
+## 5. Evaluation Summary
+- **Test Metrics:** ROUGE-L 0.26, BERTScore F1 0.88, Medical Term Retention 70%.
+- **Insights:** LoRA improves factual accuracy; hallucinations reduce with larger context.
+
+## 6. Inference Pipeline
+- **Input:** Assessment and Plan (text).
+- **Output:** Patient-friendly summary.
+- **Snippet:**
+  ```
+  prompt = f"Assessment: {assessment}\nPlan: {plan}\nRewrite the above for a patient with no medical background."
+  inputs = tokenizer(prompt, return_tensors="pt").to(device)
+  outputs = model.generate(**inputs, max_new_tokens=256, ...)
+  generated_text = tokenizer.decode(outputs, skip_special_tokens=True)[len(prompt):]
+  ```
+
+## 7. Deployment Details
+
+ * LLMs: TinyLlama Endpoint on HuggingFace Spaces
+
+- **Platform:** Hugging Face Spaces (Gradio/Streamlit).
+- **Model Hosting:** PEFT LoRA adapter on HF Model Hub.
+
+
+## 8. System Design Considerations
+- **Modular:** Segregated preprocessing, inference, and UI.
+- **Scalable:** Model can be updated with new data.
+- **Data Flow:** Input → preprocessing → model → UI/API.
+
+## 9. Error Handling & Monitoring
+- **NaN Handling:** Fallback for empty outputs.
+- **Latency:** Monitoring via app logs.
+- **Failures:** Re-load checkpoint and retry.
+
+## 10. Reproducibility Checklist
+- **Paths:** `./distilled-student-peft`, `./docs/`
+- **Seed:** Fixed seed for training/inference.
+- **Checkpoints:** Model and tokenizer checkpoints on HF Hub.
+- **Config:** See `config.json` and `requirements.txt`.
+
+- **Interaction:** UI at https://huggingface.co/spaces/srsrini/DSAIL_endpoint
+- **Example Request:**
+-   Please see User Guide
+
+
 
