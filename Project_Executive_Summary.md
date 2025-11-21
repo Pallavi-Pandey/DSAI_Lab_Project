@@ -1,4 +1,4 @@
-# Title Page
+# Project Implementation Overview
 
 - Project: Multi-Modal Clinical Assistant (Speech → OCR → Text → Role-Aware Summaries)
 - Team: Group 1
@@ -6,6 +6,8 @@
 - Date: 2025-11-14
 
 ---
+# Note
+This document provides a sketch of the project. The detailed project report is included in the docs directory. Please do not use this document for evaluation. 
 
 # Abstract
 
