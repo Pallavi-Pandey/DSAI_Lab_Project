@@ -20,6 +20,8 @@ This project implements a comprehensive multimodal AI pipeline that combines:
 
 ## Project Structure
 
+(to be updated with final structure)
+
 ```
 .
 ├── README.md
@@ -93,49 +95,29 @@ https://huggingface.co/spaces/srsrini/DSAIL_endpoint
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/Pallavi-Pandey/DSAI_Lab_Project.git
-cd DSAI_Lab_Project
+* Please see individual docs in the doscs section
+  
 
-# Install dependencies
-pip install -r requirements.txt
-```
 
 ## Usage
 
 ### Running the Application
 
-```bash
-# Start the API server
-python app/main.py
-```
+* Please see individual docs in the doscs section
 
 ### API Endpoints
+* Please see individual docs in the doscs section
 
-```bash
-# Example API usage
-curl -X POST http://localhost:8000/api/transcribe \
-  -F "audio=@sample.wav"
-```
 
 ## Development
 
 ### Running Notebooks
 
-```bash
-# Launch Jupyter
-jupyter notebook notebooks/
-```
+* Please see individual docs in the doscs section
 
 ### Module Testing
 
-```bash
-# Test individual modules
-python -m modules.speech.transcribe
-python -m modules.vision.model
-python -m modules.text.llm_infer
-```
+* Please see individual docs in the doscs section
 
 ## Documentation
 
