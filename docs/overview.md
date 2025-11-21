@@ -71,9 +71,15 @@ And automatically generate:
 
 ### **Deployed Components**
 
+#### For Text Part
+- **Frontend/UI:** Streamlit app running on Hugging Face Spaces.
+- **Model:** PEFT LoRA adapter for patient summary generation.
+
+
+
 | Component                       | Platform                       | Status       |
 | ------------------------------- | ------------------------------ | ----------   |
-| Frontend (Streamlit)            | local                          | Not used     |
+| Frontend (Streamlit)            | HF Spaces                      | To be done   |
 | Backend API (FastAPI)           | local                          | Not used     |
 | Whisper STT Model               | Google colab                   | Integrated   |
 | LLMs (Patient & Doctor)         | Kaggle, HF Spaces Gradio       | Integrated   |
