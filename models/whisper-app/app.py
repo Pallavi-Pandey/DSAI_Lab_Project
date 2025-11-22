@@ -41,12 +41,15 @@ else:
         model = None
         processor = None
 
-def transcribe_audio(audio_file):
+def transcribe_audio(audio_upload, audio_mic):
     """Transcribe audio using the fine-tuned Whisper model"""
     if model is None or processor is None:
         return "Error: Model not loaded. Please check server logs for missing files."
 
-    print(f"Processing: {audio_file}")
+    # Determine which audio source was used
+    audio_file = audio_mic if audio_mic else audio_upload
+    
+    print(f"Processing audio from source: {'Microphone' if audio_mic else 'Upload'}")
     
     if audio_file is None:
         return "Please upload an audio file or record using the microphone."
@@ -100,11 +103,19 @@ with gr.Blocks(title="Whisper ASR") as demo:
     
     with gr.Row():
         with gr.Column():
-            audio_input = gr.Audio(
-                sources=["upload", "microphone"],
-                type="filepath",
-                label="Audio Input"
-            )
+            with gr.Tab("Upload Audio"):
+                audio_upload = gr.Audio(
+                    source="upload",
+                    type="filepath",
+                    label="Upload Audio File"
+                )
+            with gr.Tab("Record Audio"):
+                audio_mic = gr.Audio(
+                    source="microphone",
+                    type="filepath",
+                    label="Record from Microphone"
+                )
+            
             submit_btn = gr.Button("Transcribe", variant="primary")
         
         with gr.Column():
@@ -116,7 +127,7 @@ with gr.Blocks(title="Whisper ASR") as demo:
     
     submit_btn.click(
         fn=transcribe_audio,
-        inputs=audio_input,
+        inputs=[audio_upload, audio_mic],
         outputs=text_output
     )
 
